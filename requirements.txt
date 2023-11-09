@@ -1,0 +1,5 @@
+pytest
+flask
+Pydantic
+waitress
+flask_cors
