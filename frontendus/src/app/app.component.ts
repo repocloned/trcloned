@@ -22,7 +22,7 @@ getOperation() {
 getCurrentValue() {
   return this.value;
 }
-  
+
 addToFaktor(arg0: string) {
   this.faktor.setValue(this.faktor.getRawValue()+arg0);
 
@@ -30,7 +30,7 @@ addToFaktor(arg0: string) {
 
 queryBackend(){
   if(this.operation == "+"){
-    fetch('http://localhost:8100/add', {
+    fetch('http://3.74.107.199:8100/add', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
@@ -46,7 +46,7 @@ queryBackend(){
   }
   if(this.operation == "*"){
 
-    fetch('http://localhost:8100/mul', {
+    fetch('http://3.74.107.199:8100/add', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
@@ -61,7 +61,7 @@ queryBackend(){
     console.log(JSON.stringify(response))})
   }
   if(this.operation == "-"){
-    fetch('http://localhost:8100/sub', {
+    fetch('http://3.74.107.199:8100/add', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
