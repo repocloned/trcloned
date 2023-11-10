@@ -22,12 +22,12 @@ services:
     container_name: frontend
     ports:
       - 85:80
-#  watchtower:
-#    image: containrrr/watchtower
-#    container_name: watchtower
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock
-#    command: --interval 30 backend frontend
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 backend frontend
 
 volumes:
   jenkins_home:
