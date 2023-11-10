@@ -21,7 +21,7 @@ services:
     image: taschenrechner_frontedn
     container_name: frontend
     ports:
-      - 8080:80
+      - 85:80
 #  watchtower:
 #    image: containrrr/watchtower
 #    container_name: watchtower
