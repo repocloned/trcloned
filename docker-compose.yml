@@ -21,13 +21,13 @@ services:
     image: taschenrechner_frontedn
     container_name: frontend
     ports:
-      - 80:80
-  watchtower:
-    image: containrrr/watchtower
-    container_name: watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 backend frontend
+      - 8080:8080
+#  watchtower:
+#    image: containrrr/watchtower
+#    container_name: watchtower
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
+#    command: --interval 30 backend frontend
 
 volumes:
   jenkins_home:
