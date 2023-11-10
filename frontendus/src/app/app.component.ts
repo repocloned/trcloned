@@ -46,7 +46,7 @@ queryBackend(){
   }
   if(this.operation == "*"){
 
-    fetch('http://3.74.107.199:8100/add', {
+    fetch('http://3.74.107.199:8100/mul', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
@@ -61,7 +61,7 @@ queryBackend(){
     console.log(JSON.stringify(response))})
   }
   if(this.operation == "-"){
-    fetch('http://3.74.107.199:8100/add', {
+    fetch('http://3.74.107.199:8100/sub', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
