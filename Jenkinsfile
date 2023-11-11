@@ -1,6 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:20.9.0-alpine3.18' }
+    }
     stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
         stage('Build Frontend') {
             steps {
                 docker.build("taschenrechner_frontend", "-f Frontend_Dockerfile")
