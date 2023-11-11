@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Frontend') {
             steps {
-                image = docker.build("taschenrechner_frontend", "-f Frontend_Dockerfile")
+                def image = docker.build("taschenrechner_frontend", "-f Frontend_Dockerfile")
             }
         }
         stage('Test Backend') {
