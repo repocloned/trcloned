@@ -2,7 +2,7 @@
 version: '3.3'
 services:
   jenkins:
-    image: liatrio/jenkins-alpine
+    image: jenkins/jenkins:lts
     privileged: true
     user: root
     ports:
