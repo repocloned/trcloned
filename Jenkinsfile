@@ -1,11 +1,9 @@
 pipeline {
-    agent {
-        docker { image 'node:20.9.0-alpine3.18' }
-    }
+    agent any
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'apt-get install docker.io'
             }
         }
 //         stage('Build Frontend') {
