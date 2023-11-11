@@ -8,11 +8,11 @@ pipeline {
                 sh 'node --version'
             }
         }
-        stage('Build Frontend') {
-            steps {
-                docker.build("taschenrechner_frontend", "-f Frontend_Dockerfile")
-            }
-        }
+//         stage('Build Frontend') {
+//             steps {
+//                 docker.build("taschenrechner_frontend", "-f Frontend_Dockerfile")
+//             }
+//         }
         stage('Test Backend') {
             steps {
                     sh "docker build -f Test_Dockerfile ."
