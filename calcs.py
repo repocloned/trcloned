@@ -18,4 +18,3 @@ class Taschenrechner(BaseModel):
 
     def multiplikation(self,a,b):
         return self.converter.str_to_int(a)*self.converter.str_to_int(b)
-

@@ -157,7 +157,7 @@ class TestSubtraktion:
             # Act & Assert
             with pytest.raises(ValueError):
                 result = sut.subtraktion(input1, input2)
-                
+
 class TestMultiplikation:
     def test_happy_path(self):
         '''multiplikation verhält sich so wie man es erwartet'''

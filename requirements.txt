@@ -3,3 +3,4 @@ flask
 Pydantic
 waitress
 flask_cors
+coverage

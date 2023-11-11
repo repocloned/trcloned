@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build Frontend') {
             steps {
-                //
+                sh "docker build -f Frontend_Dockerfile ."
             }
         }
-        stage('Test') {
+        stage('Test Backend') {
             steps {
-                //
+                    sh "docker build -f Test_Dockerfile ."
             }
         }
-        stage('Deploy') {
+        stage('Build Backend') {
             steps {
-                //
+                sh "docker build -f Backend_Dockerfile ."
             }
         }
     }
