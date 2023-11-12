@@ -13,7 +13,6 @@ rechner = Taschenrechner()
 def version_request():
     return "1.0 -- Lukas Kohlhase -- und jetzt anders"
 
-
 @app.route('/add',methods=['POST'])
 def addition_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
