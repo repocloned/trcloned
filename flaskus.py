@@ -11,7 +11,7 @@ rechner = Taschenrechner()
 
 @app.route('/version')
 def version_request():
-    return "1.0 -- Lukas Kohlhase -- und jetzt anders"
+    return "2.0 -- Lukas Kohlhase"
 
 @app.route('/add',methods=['POST'])
 def addition_request():
