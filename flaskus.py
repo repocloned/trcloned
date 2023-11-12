@@ -9,8 +9,8 @@ app = Flask(__name__)
 CORS(app)
 rechner = Taschenrechner()
 
-@app.route('/version',methods=['POST'])
-def addition_request():
+@app.route('/version')
+def version_request():
     return "1.0 -- Lukas Kohlhase"
 @app.route('/add',methods=['POST'])
 def addition_request():
