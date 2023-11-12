@@ -1,0 +1,43 @@
+name: Publish Containers and Deploy try 2
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch
+
+
+env:
+  IMAGE_NAME_BACKEND: taschendrechner_backend
+  IMAGE_NAME_FRONTEND: taschenrechner_frontend
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Login against a Docker registry except on PR
+      # https://github.com/docker/login-action
+      - name: Log into registry dockerhub
+        uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
+        with:
+          username: msgdevopscommunity
+          password: dckr_pat_zs1mDHGFMrAw-nzScZmay-b1fnI
+
+      # Build and push Docker image with Buildx (don't push on PR)
+      # https://github.com/docker/build-push-action
+      - name: Build and push Docker image
+        id: build-and-push
+        uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
+        with:
+          context: .
+          tags: msgdevopscommunity/taschenrechner_backend
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          file: ./Backend_Dockerfile
