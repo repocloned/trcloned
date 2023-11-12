@@ -9,6 +9,9 @@ app = Flask(__name__)
 CORS(app)
 rechner = Taschenrechner()
 
+@app.route('/version',methods=['POST'])
+def addition_request():
+    return "1.0 -- Lukas Kohlhase"
 @app.route('/add',methods=['POST'])
 def addition_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
@@ -25,6 +28,4 @@ def mul_request():
     return str(rechner.multiplikation(requestinfos['wert1'],requestinfos['wert2']))
 
 if __name__ == '__main__':
-    print('asdf')
-    print('qwer')
     serve(app,port=8100)
