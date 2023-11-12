@@ -15,12 +15,12 @@ jobs:
         steps:
         - uses: actions/checkout@v3
         - name: Build the Docker image
-          run: docker login --username msgdevopscommunity --password dckr_pat_zs1mDHGFMrAw-nzScZmay-b1fnI && docker build . --file Backend_Dockerfile --tag msgdevopscommunity/taschenrechner_backend:latest && docker push msgdevopscommunity/taschenrechner_backend:latest
+          run: docker login --username msgdevopscommunity --password dckr_pat_zs1mDHGFMrAw-nzScZmay-b1fnI && docker build --file Backend_Dockerfile --tag msgdevopscommunity/taschenrechner_backend:latest .  && docker push msgdevopscommunity/taschenrechner_backend:latest
   build_and_publish_frontend:
       runs-on: ubuntu-latest
 
       steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker login --username msgdevopscommunity --password dckr_pat_zs1mDHGFMrAw-nzScZmay-b1fnI && docker build . --file Frontend_Dockerfile --tag msgdevopscommunity/taschenrechner_frontend:latest && docker push msgdevopscommunity/taschenrechner_frontend:latest
+        run: docker login --username msgdevopscommunity --password dckr_pat_zs1mDHGFMrAw-nzScZmay-b1fnI && docker build --file Frontend_Dockerfile --tag msgdevopscommunity/taschenrechner_frontend:latest .  && docker push msgdevopscommunity/taschenrechner_frontend:latest
           
