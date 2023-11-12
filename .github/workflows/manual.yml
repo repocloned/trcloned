@@ -17,10 +17,7 @@ jobs:
         - name: Build the Docker image
           run: |
             docker login --username msgdevopscommunity --password dckr_pat_zs1mDHGFMrAw-nzScZmay-b1fnI
-            docker image prune
-            docker build --file Backend_Dockerfile --tag msgdevopscommunity/taschenrechner_backend:latest .
-            echo '================================================================='
-            docker push docker.io/msgdevopscommunity/taschenrechner_backend:latest
+            docker build --file Backend_Dockerfile --tag msgdevopscommunity/taschenrechner_backend:latest --push .
   build_and_publish_frontend:
       runs-on: ubuntu-latest
 
@@ -30,6 +27,4 @@ jobs:
         run: |
             docker login --username msgdevopscommunity --password dckr_pat_zs1mDHGFMrAw-nzScZmay-b1fnI
             docker image prune
-            docker build --file Frontend_Dockerfile --tag msgdevopscommunity/taschenrechner_frontend:latest .
-            echo '================================================================='
-            docker push docker.io/msgdevopscommunity/taschenrechner_frontend:latest
+            docker build --file Frontend_Dockerfile --tag msgdevopscommunity/taschenrechner_frontend:latest --push .
