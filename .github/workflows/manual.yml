@@ -20,7 +20,7 @@ jobs:
             docker image prune
             docker build --file Backend_Dockerfile --tag msgdevopscommunity/taschenrechner_backend:latest .
             echo '================================================================='
-            docker push msgdevopscommunity/taschenrechner_backend:latest
+            docker push docker.io/msgdevopscommunity/taschenrechner_backend:latest
   build_and_publish_frontend:
       runs-on: ubuntu-latest
 
@@ -32,4 +32,4 @@ jobs:
             docker image prune
             docker build --file Frontend_Dockerfile --tag msgdevopscommunity/taschenrechner_frontend:latest .
             echo '================================================================='
-            docker push msgdevopscommunity/taschenrechner_frontend:latest
+            docker push docker.io/msgdevopscommunity/taschenrechner_frontend:latest
