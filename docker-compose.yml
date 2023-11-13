@@ -12,12 +12,12 @@ services:
     ports:
       - 85:80
   backend_dev:
-    image: msgdevopscommunity/taschenrechner_backend:latest
+    image: msgdevopscommunity/taschenrechner_backend:dev
     container_name: backend
     ports:
       - 10086:8100
   frontend_dev:
-    image: msgdevopscommunity/taschenrechner_frontend:latest
+    image: msgdevopscommunity/taschenrechner_frontend:dev
     container_name: frontend
     ports:
       - 10085:80
