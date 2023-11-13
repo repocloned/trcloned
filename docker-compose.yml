@@ -13,12 +13,12 @@ services:
       - 85:80
   backend_dev:
     image: msgdevopscommunity/taschenrechner_backend:dev
-    container_name: backend
+    container_name: backend_dev
     ports:
       - 10086:8100
   frontend_dev:
     image: msgdevopscommunity/taschenrechner_frontend:dev
-    container_name: frontend
+    container_name: frontend_dev
     ports:
       - 10085:80
   watchtower:
