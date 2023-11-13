@@ -46,12 +46,15 @@ addToFaktor(arg0: string) {
 }
 getBackendUrl(){
   if (location.href.includes('localhost')){
+    console.log('localhost')
     return 'http://localhost:8100'
   }
 
   if (location.href.includes('3.74.107.199:85')){
+    console.log('prod')
     return 'http://3.74.107.199:86'
   }
+  console.log('dev')
   return  'http://3.74.107.199:10086'
 
 }
