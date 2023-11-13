@@ -5,18 +5,28 @@ services:
     image: msgdevopscommunity/taschenrechner_backend:latest
     container_name: backend
     ports:
-      - 8100:8100
+      - 86:8100
   frontend:
     image: msgdevopscommunity/taschenrechner_frontend:latest
     container_name: frontend
     ports:
       - 85:80
+  backend_dev:
+    image: msgdevopscommunity/taschenrechner_backend:latest
+    container_name: backend
+    ports:
+      - 10086:8100
+  frontend_dev:
+    image: msgdevopscommunity/taschenrechner_frontend:latest
+    container_name: frontend
+    ports:
+      - 10085:80
   watchtower:
     image: containrrr/watchtower
     container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 backend frontend
+    command: --interval 30 backend frontend backend_dev frontend_dev
 
 volumes:
   jenkins_home:
