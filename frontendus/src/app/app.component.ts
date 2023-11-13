@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,24 @@ import { FormControl } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  version = 'undetermined'
+  ngOnInit(): void {
+    fetch(this.getBackendUrl() + '/version', {
+      method: 'GET',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      }
+  })
+     .then(response => {console.log(response); return response.json()})
+     .then(response => {
+      this.version = response['version'];
+      console.log(JSON.stringify(response))})
+  }
+
+  
+
   faktor = new FormControl('')
 
 
@@ -27,10 +44,23 @@ addToFaktor(arg0: string) {
   this.faktor.setValue(this.faktor.getRawValue()+arg0);
 
 }
+getBackendUrl(){
+  if (location.href.includes('localhost')){
+    return 'http://localhost:8100'
+  }
+
+  if (location.href.includes('3.74.107.199:85')){
+    return 'http://3.74.107.199:86'
+  }
+  return  'http://3.74.107.199:10086'
+
+}
+
+
 
 queryBackend(){
   if(this.operation == "+"){
-    fetch('http://3.74.107.199:8100/add', {
+    fetch(this.getBackendUrl() + '/add', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
@@ -46,7 +76,7 @@ queryBackend(){
   }
   if(this.operation == "*"){
 
-    fetch('http://3.74.107.199:8100/mul', {
+    fetch(this.getBackendUrl() + '/mul', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
@@ -61,7 +91,7 @@ queryBackend(){
     console.log(JSON.stringify(response))})
   }
   if(this.operation == "-"){
-    fetch('http://3.74.107.199:8100/sub', {
+    fetch(this.getBackendUrl() + '/sub', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
