@@ -9,8 +9,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-RUN echo "$(cat /python-docker/flaskus.py)"
-
-
 
 CMD ["python3", "-m", "flaskus"]
