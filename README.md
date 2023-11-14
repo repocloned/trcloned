@@ -5,6 +5,6 @@
 "Prod Umgebung Backend": http://3.74.107.99:86
 
 
-"Prod Umgebung Frontend": http://3.74.107.99:10085 
+"Dev Umgebung Frontend": http://3.74.107.99:10085 
 
-"Prod Umgebung Backend": http://3.74.107.99:10086 
+"Dev Umgebung Backend": http://3.74.107.99:10086 
