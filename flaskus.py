@@ -16,7 +16,7 @@ def version_request():
 @app.route('/add',methods=['POST'])
 def addition_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.addition(requestinfos['wert1'],requestinfos['wert2']))
+    return str(rechner.subtraktion(requestinfos['wert1'],requestinfos['wert2']))
 
 @app.route('/sub',methods=['POST'])
 def sub_request():
