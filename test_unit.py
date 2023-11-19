@@ -5,7 +5,7 @@ from calcs import Taschenrechner
 
 class Testaddition:
     def test_happy_path(self):
-        '''addition verhält sich so wie man es erwartet'''
+        '''Addition verhält sich so wie man es erwartet'''
         # Arrange
         sut= Taschenrechner()
         input1 = 5
@@ -16,7 +16,7 @@ class Testaddition:
         assert result == 11
 
     def test_kommutativ(self):
-        '''addition ist kommutativ <==> a+b==b+a'''
+        '''Addition ist kommutativ <==> a+b==b+a'''
         # Arrange
         sut= Taschenrechner()
         input1 = 5
@@ -27,7 +27,7 @@ class Testaddition:
         assert result == sut.addition(input2, input1)
 
     def test_assoziativ(self):
-        '''addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
+        '''Addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
         # Arrange
         sut= Taschenrechner()
         summanden = [1, 2, 3]
@@ -63,7 +63,7 @@ class Testaddition:
         assert result == expected
 
     class TestFalscheInputs():
-        '''addition gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lásst'''
+        '''Addition gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lásst'''
         def test_falscher_input_zuerst(self):
             #Arrange
             sut = Taschenrechner()
@@ -130,7 +130,7 @@ class TestSubtraktion:
         assert result == expected
 
     class TestFalscheInputs():
-        '''subtraktion gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lásst'''
+        '''Subtraktion gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lásst'''
         def test_falscher_input_zuerst(self):
             #Arrange
             sut = Taschenrechner()
@@ -160,7 +160,7 @@ class TestSubtraktion:
 
 class TestMultiplikation:
     def test_happy_path(self):
-        '''multiplikation verhält sich so wie man es erwartet'''
+        '''Multiplikation verhält sich so wie man es erwartet'''
         # Arrange
         sut= Taschenrechner()
         input1 = 5
@@ -171,7 +171,7 @@ class TestMultiplikation:
         assert result == 30
 
     def test_kommutativ(self):
-        '''mMltiplikation ist kommutative <==> a*b=b*a'''
+        '''Multiplikation ist kommutativ <==> a*b=b*a'''
         #Arrange
         sut = Taschenrechner()
         input1=5
@@ -220,7 +220,7 @@ class TestMultiplikation:
                                  (-11111111, -22222222, 246913575308642, 'Grosse Negative Zahlen'),
                                  (1111111, 2222222, 2469135308642, 'Grosse positive Zahlen')])
     def test_verschiedene_werte(self, summand1, summand2, expected, beschreibung):
-        '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden. asdfasdfasdf werwer sdfwer sdfsdwerwer '''
+        '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden.'''
         #Arrange
         sut= Taschenrechner()
         #Act
