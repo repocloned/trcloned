@@ -11,12 +11,12 @@ rechner = Taschenrechner()
 
 @app.route('/version')
 def version_request():
-    return {"version": "67.0 -- Lukas Kohlhase"}
+    return {"version": "62.0 -- Berkay Guengoer"}
 
 @app.route('/add',methods=['POST'])
 def addition_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.subtraktion(requestinfos['wert1'],requestinfos['wert2']))
+    return str(rechner.addition(requestinfos['wert1'],requestinfos['wert2']))
 
 @app.route('/sub',methods=['POST'])
 def sub_request():
