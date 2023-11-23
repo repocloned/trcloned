@@ -13,7 +13,7 @@ class Taschenrechner(BaseModel):
     converter: StringKonverter = StringKonverter()
 
     def addition(self, a, b):
-        return self.converter.str_to_int(a) * self.converter.str_to_int(b)
+        return self.converter.str_to_int(a) + self.converter.str_to_int(b)
 
     def subtraktion(self, a, b):
         return self.converter.str_to_int(a) - self.converter.str_to_int(b)
