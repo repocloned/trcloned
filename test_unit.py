@@ -220,7 +220,7 @@ class TestMultiplikation:
                                  (-11111111, -22222222, 246913575308642, 'Grosse Negative Zahlen'),
                                  (1111111, 2222222, 2469135308642, 'Grosse positive Zahlen')])
     def test_verschiedene_werte(self, summand1, summand2, expected, beschreibung):
-        '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden.'''
+        '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden'''
         #Arrange
         sut= Taschenrechner()
         #Act
@@ -255,4 +255,4 @@ class TestMultiplikation:
             input2 = 'käse'
             # Act & Assert
             with pytest.raises(ValueError):
-                result = sut.multiplikation(input1, input2)
+                result = sut.multiplikation(input1,input2)
