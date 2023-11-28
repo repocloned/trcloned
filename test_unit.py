@@ -255,4 +255,4 @@ class TestMultiplikation:
             input2 = 'käse'
             # Act & Assert
             with pytest.raises(ValueError):
-                result = sut.multiplikation(input1,input2)
+                result = sut.multiplikation(input1, input2)
