@@ -1,6 +1,6 @@
 import pytest
 
-from Hausaufgabe import dumme_peano_addition, groesste_n_zahlen_implementation_1, groesste_n_zahlen_implementation_2
+from Hausaufgabe import dumme_addition, groesste_n_zahlen_implementation_1, groesste_n_zahlen_implementation_2
 
 
 class TestAufgabeEins():
@@ -10,7 +10,7 @@ class TestAufgabeEins():
         input1 = 5
         input2 = 6
         # Act
-        result = dumme_peano_addition(input1,input2)
+        result = dumme_addition(input1, input2)
         # Assert
         assert result == 11
 
@@ -21,9 +21,9 @@ class TestAufgabeEins():
         # Arrange
         summanden = [1, 2, 3]
         # Act
-        result = dumme_peano_addition(dumme_peano_addition(summanden[0], summanden[1]), summanden[2])
+        result = dumme_addition(dumme_addition(summanden[0], summanden[1]), summanden[2])
         # Assert
-        assert result == dumme_peano_addition(summanden[0], dumme_peano_addition(summanden[1], summanden[2]))
+        assert result == dumme_addition(summanden[0], dumme_addition(summanden[1], summanden[2]))
 
 
     def test_0_neutrales_element(self):
@@ -31,7 +31,7 @@ class TestAufgabeEins():
         # Arrange
         input = 5
         # Act
-        result = dumme_peano_addition(0, input)
+        result = dumme_addition(0, input)
         # Assert
         assert result == input
 
@@ -45,7 +45,7 @@ class TestAufgabeEins():
             '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden'''
             #Arrange
             #Act
-            result = dumme_peano_addition(summand1,summand2)
+            result = dumme_addition(summand1, summand2)
             #Assert
             assert result == expected
 
