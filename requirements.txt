@@ -4,3 +4,4 @@ Pydantic
 waitress
 flask_cors
 coverage
+requests
