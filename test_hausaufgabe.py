@@ -5,7 +5,7 @@ from Hausaufgabe import dumme_addition, groesste_n_zahlen_implementation_1, groe
 
 
 class TestAufgabeEins():
-    def test_happy_path(self):
+    def test_happy_path_1(self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
@@ -15,7 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 11
 
-
+    def test_happy_path_2(self):
+        '''addition verhält sich so wie man es erwartet'''
+        # Arrange
+        input1 = 6
+        input2 = 5
+        # Act
+        result = dumme_addition(input1, input2)
+        # Assert
+        assert result == 11
 
     def test_assoziativ(self):
         '''addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
