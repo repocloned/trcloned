@@ -15,7 +15,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 11
 
- def addition_null(self):
+ def test_happy_path_2(self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 0
