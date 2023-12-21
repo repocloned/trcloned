@@ -23,7 +23,7 @@ class TestAufgabeEins():
         # Act
         result = dumme_addition(input1, input2)
         # Assert
-    assert result == 5
+        assert result == 5
 
 
 
