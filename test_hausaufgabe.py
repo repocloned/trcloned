@@ -50,6 +50,15 @@ class TestAufgabeEins():
             #Assert
             assert result == expected
 
+    def test_einer_der_summanden_ist_null(self):
+            '''Einer der Summanden ist gleich 0'''
+            #Arrange
+            input1 = 0
+            input2 = 6
+            #Act
+            result = dumme_addition(input1, input2)
+            #Assert
+            assert result == input2
 
 
 
