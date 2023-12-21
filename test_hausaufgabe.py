@@ -14,9 +14,8 @@ class TestAufgabeEins():
         result = dumme_addition(input1, input2)
         # Assert
         assert result == 11
-
         
-    def test_happy_path_b0_test (self):
+   def test_happy_path_b0_test (self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
@@ -25,6 +24,8 @@ class TestAufgabeEins():
         result = dumme_addition(input1, input2)
         # Assert
         assert result == 5
+
+
 
     def test_assoziativ(self):
         '''addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
@@ -58,6 +59,9 @@ class TestAufgabeEins():
             result = dumme_addition(summand1, summand2)
             #Assert
             assert result == expected
+
+
+
 
 class TestAufgabeZwei():
 
