@@ -15,6 +15,15 @@ class TestAufgabeEins():
         # Assert
         assert result == 11
 
+    def test_einer_der_summanden_ist_null(self):
+        '''einer der summanden ist gleich null'''
+        # Arrange
+        input1 = 0
+        input2 = 5
+        # Act
+        result = dumme_addition(input1, input2)
+        # Assert
+        assert result == input2
 
 
     def test_assoziativ(self):
