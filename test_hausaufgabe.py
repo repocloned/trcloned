@@ -14,6 +14,16 @@ class TestAufgabeEins():
         result = dumme_addition(input1, input2)
         # Assert
         assert result == 11
+        
+    def test_einer_der_summanden_ist_null (self):
+        '''Einer der Summaneden ist gleich 0'''
+        # Arrange
+        input1 = 0
+        input2 = 6
+        # Act
+        result = dumme_addition(input1, input2)
+        # Assert
+        assert result == input2   
 
 
 
