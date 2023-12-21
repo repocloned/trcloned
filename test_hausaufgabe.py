@@ -59,9 +59,6 @@ class TestAufgabeEins():
             #Assert
             assert result == expected
 
-
-
-
 class TestAufgabeZwei():
 
     def test_findet_hoechste_5_implementation_1(self):
