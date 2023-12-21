@@ -15,7 +15,7 @@ class TestAufgabeEins():
         # Assert
         assert result == 11
         
-   def test_happy_path_b0_test (self):
+    def test_happy_path_b0_test (self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
         input1 = 5
@@ -23,7 +23,7 @@ class TestAufgabeEins():
         # Act
         result = dumme_addition(input1, input2)
         # Assert
-        assert result == 5
+    assert result == 5
 
 
 
