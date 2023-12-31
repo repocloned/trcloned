@@ -42,6 +42,7 @@ class TestAufgabeEins():
                                      (4, 5, 9, 'positiv + positiv'),
                                      (42, 69, 111, 'positiv + positiv'),
                                      (111, 222, 333, 'Grosse positive Zahlen')])
+    
     def test_verschiedene_werte(self,summand1, summand2, expected, beschreibung):
             '''Testet in verschiedenen Szenarien, dass die richtigen Werte berechnet werden'''
             #Arrange
@@ -49,6 +50,19 @@ class TestAufgabeEins():
             result = dumme_addition(summand1, summand2)
             #Assert
             assert result == expected
+
+    def test_0_neutrales_element_a_und_b(self):
+        '''0 ist neutrales Element der Addition <==> a+0 = 0+a = a'''
+        # Arrange
+        input = 5
+    
+        # Act und Assert
+        result_operand_a = dumme_addition(0, input)
+        result_zweiter_b = dumme_addition(input, 0)
+    
+        # Assert
+        assert result_erster_a == input
+        assert result_zweiter_b == input
 
 
 
