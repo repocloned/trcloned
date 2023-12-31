@@ -58,11 +58,11 @@ class TestAufgabeEins():
     
         # Act und Assert
         result_operand_a = dumme_addition(0, input)
-        result_zweiter_b = dumme_addition(input, 0)
+        result_operand_b = dumme_addition(input, 0)
     
         # Assert
-        assert result_erster_a == input
-        assert result_zweiter_b == input
+        assert result_operand_a == input
+        assert result_operand_b == input
 
 
 
