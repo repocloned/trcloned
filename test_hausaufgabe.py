@@ -18,12 +18,12 @@ class TestAufgabeEins():
 def test_happy_path_null(self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
-        input1 = 6
+        input1 = 5
         input2 = 0
         # Act
         result = dumme_addition(input1, input2)
         # Assert
-        assert result == 6
+        assert result == 5
     
 
     def test_assoziativ(self):
