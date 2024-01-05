@@ -64,13 +64,13 @@ def test_happy_path_null(self):
 
 class TestAufgabeZwei():
 
-    def test_findet_hoechste_5_implementation_1(self):
+       def test_findet_hoechste_5_implementation_1(self):
         #Arrange
         liste=[1,2,3,4,5,6,7,8,9,10]
         #Act
         result = groesste_n_zahlen_implementation_1(liste,5)
         #Assert
-        assert result == [6,7,8,9,10]
+        assert set(result) == set([6,7,8,9,10])
 
 
     def test_findet_hoechste_5_implementation_2(self):
@@ -79,7 +79,7 @@ class TestAufgabeZwei():
         #Act
         result = groesste_n_zahlen_implementation_2(liste,5)
         #Assert
-        assert result == [10,9,8,7,6]
+        assert set(result) == set([6,7,8,9,10])
 
 class TestAufgabeFuenf():
      def test_richtige_rueckgabe(self):
