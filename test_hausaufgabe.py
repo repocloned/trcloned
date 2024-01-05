@@ -25,9 +25,6 @@ class TestAufgabeEins():
         # Assert
         assert result == 5, "Sollte 5 zurückgeben, da 5 + 0 = 5 ist"
 
-    
-
-
     def test_assoziativ(self):
         '''addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
         # Arrange
@@ -62,10 +59,9 @@ class TestAufgabeEins():
             assert result == expected
 
 
-
 class TestAufgabeZwei():
 
-       def test_findet_hoechste_5_implementation_1(self):
+    def test_findet_hoechste_5_implementation_1(self):
         #Arrange
         liste=[1,2,3,4,5,6,7,8,9,10]
         #Act
@@ -83,7 +79,7 @@ class TestAufgabeZwei():
         assert set(result) == set([6,7,8,9,10])
 
 class TestAufgabeFuenf():
-     def test_richtige_rueckgabe(self):
+    def test_richtige_rueckgabe(self):
         #Arrange
         url = "https://api.predic8.de/shop/v2/products"
         product_name = "Test -Mangos"
