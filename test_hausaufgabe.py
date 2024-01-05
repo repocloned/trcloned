@@ -14,16 +14,17 @@ class TestAufgabeEins():
         result = dumme_addition(input1, input2)
         # Assert
         assert result == 11
-        
-    def test_happy_path_b0_test (self):
-        '''addition verhält sich so wie man es erwartet'''
+
+    def test_mit_b_gleich_0(self):
+        '''Testet, ob die Addition korrekt ist, wenn b 0 ist'''
         # Arrange
         input1 = 5
         input2 = 0
         # Act
         result = dumme_addition(input1, input2)
         # Assert
-        assert result == 5
+        assert result == 5, "Sollte 5 zurückgeben, da 5 + 0 = 5 ist"
+
     
 
     def test_assoziativ(self):
