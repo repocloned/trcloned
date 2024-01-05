@@ -18,8 +18,8 @@ class TestAufgabeEins():
 def test_happy_path_null(self):
         '''addition verhält sich so wie man es erwartet'''
         # Arrange
-        input1 = 0
-        input2 = 6
+        input1 = 6
+        input2 = 0
         # Act
         result = dumme_addition(input1, input2)
         # Assert
