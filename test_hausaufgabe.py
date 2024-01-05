@@ -82,7 +82,7 @@ class TestAufgabeZwei():
         assert result == [10,9,8,7,6]
 
 class TestAufgabeFuenf():
-    def test_richtige_rueckgabe(self):
+    def test_richtige_rueckgabe(self): def test_richtige_rueckgabe(self):
         #Arrange
         url = "https://api.predic8.de/shop/v2/products"
         product_name = "Test -Mangos"
@@ -91,7 +91,6 @@ class TestAufgabeFuenf():
         result = requests.post(url= url, json = {"name" : product_name, "price" : product_price}, headers={"Content-Type": "application/json"})
         #Assert
         json = result.json()
-        #assert json['id']== -1
-        #ssert json['self_link'] == '/shop/v2/products/-1'
+        
         assert json['name'] == product_name
         assert json['price'] == product_price
