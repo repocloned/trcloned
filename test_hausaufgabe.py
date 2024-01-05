@@ -27,6 +27,7 @@ class TestAufgabeEins():
 
     
 
+
     def test_assoziativ(self):
         '''addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
         # Arrange
@@ -59,7 +60,6 @@ class TestAufgabeEins():
             result = dumme_addition(summand1, summand2)
             #Assert
             assert result == expected
-
 
 
 
