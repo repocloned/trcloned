@@ -98,3 +98,4 @@ class TestAufgabeFuenf():
         json = result.json()
         assert json['name'] == product_name
         assert json['price'] == product_price
+        
