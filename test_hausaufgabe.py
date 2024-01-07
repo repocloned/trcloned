@@ -23,7 +23,7 @@ def test_b_is_zero(self):
     # Act
     result = dumme_addition(input1, input2)
     # Assert
-    assert result == 5
+    assert result == input1
 
     def test_assoziativ(self):
         '''addition ist assoziativ <==> (a+b)+c= a+(b+c)'''
