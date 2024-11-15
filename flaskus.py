@@ -20,7 +20,7 @@ APP = create_app()
 
 @APP.route('/version')
 def version_request():
-    return {"version": "67.0 -- Lukas Kohlhase"}
+    return {"version": "4.0 -- Lukas Kohlhase"}
 
 @APP.route('/add', methods=['POST'])
 def addition_request():
@@ -36,11 +36,6 @@ def sub_request():
 def mul_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
     return str(rechner.multiplikation(requestinfos['wert1'],requestinfos['wert2']))
-
-@APP.route('/div', methods=['POST'])
-def div_request():
-    requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.division(requestinfos['wert1'],requestinfos['wert2']))
 
 if __name__ == '__main__':
 
