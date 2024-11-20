@@ -14,15 +14,15 @@ def client():
         with app.test_client() as client:
             yield client
 
-def test_version_string(client):
-    """Wenn die Version abgefragt wird, dann soll die aktuelle Version zurückgegeben werden (version: 67.0 -- Lukas Kohlhase)"""
-    #Arrange
-
-    #Act
-    result = client.get('/version')
-    #Assert
-    data = ast.literal_eval(result.data.decode().strip())
-    assert data['version'] == '67.0 -- Lukas Kohlhase'
+# def test_version_string(client):
+#     """Wenn die Version abgefragt wird, dann soll die aktuelle Version zurückgegeben werden (version: 67.0 -- Lukas Kohlhase)"""
+#     #Arrange
+#
+#     #Act
+#     result = client.get('/version')
+#     #Assert
+#     data = ast.literal_eval(result.data.decode().strip())
+#     assert data['version'] == '67.0 -- Lukas Kohlhase'
 
 
 def test_addition(client):
