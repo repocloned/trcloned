@@ -35,7 +35,12 @@ def sub_request():
 @APP.route('/mul', methods=['POST'])
 def mul_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.multiplikation(requestinfos['wert1'],requestinfos['wert2']))
+    return str(rechner.multiplikation(requestinfos['wert1'],requestinfos['wert2']))\
+
+@APP.route('/div', methods=['POST'])
+def div_request():
+    requestinfos={key: value for key,value in flask.request.json.items()}
+    return str(rechner.division(requestinfos['wert1'],requestinfos['wert2']))
 
 if __name__ == '__main__':
 
