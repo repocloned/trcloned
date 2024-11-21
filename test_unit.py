@@ -160,7 +160,7 @@ class TestSubtraktion:
 
 class TestMultiplikation:
     def test_happy_path(self):
-        '''multiplikation verhält sich so wie man es erwartet'''
+        '''Multiplikation verhält sich so wie man es erwartet'''
         # Arrange
         sut= Taschenrechner()
         input1 = 5
@@ -171,7 +171,7 @@ class TestMultiplikation:
         assert result == 30
 
     def test_kommutativ(self):
-        '''mMltiplikation ist kommutative <==> a*b=b*a'''
+        '''mMltiplikation ist kommutativ <==> a*b=b*a'''
         #Arrange
         sut = Taschenrechner()
         input1=5
