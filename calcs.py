@@ -1,4 +1,3 @@
-# Version: 4.1 -- Lina Pham  
 from pydantic import BaseModel
 
 
