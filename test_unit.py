@@ -229,7 +229,7 @@ class TestMultiplikation:
         assert result == expected
 
     class TestFalscheInputs():
-        '''Multiplikation gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lässt'''
+        '''Multiplikation gibt valueErrors zurück wenn der input sich nicht sauber zu einer Zahl verarbeiten lásst'''
         def test_falscher_input_zuerst(self):
             #Arrange
             sut = Taschenrechner()
