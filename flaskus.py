@@ -20,17 +20,17 @@ APP = create_app()
 
 @APP.route('/version')
 def version_request():
-    return {"version": "4.0 -- Lukas Kohlhase"}
+    return {"version": "089475029847509287450928745827405987234095872304857203457029347502754309742350974235827435_Jannik"}
 
 @APP.route('/add', methods=['POST'])
 def addition_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.subtraktion(requestinfos['wert1'],requestinfos['wert2']))
+    return str(rechner.addition(requestinfos['wert1'],requestinfos['wert2']))
 
 @APP.route('/sub', methods=['POST'])
 def sub_request():
     requestinfos={key: value for key,value in flask.request.json.items()}
-    return str(rechner.addition(requestinfos['wert1'],requestinfos['wert2']))
+    return str(rechner.subtraktion(requestinfos['wert1'],requestinfos['wert2']))
 
 @APP.route('/mul', methods=['POST'])
 def mul_request():
