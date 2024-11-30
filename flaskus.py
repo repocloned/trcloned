@@ -20,7 +20,7 @@ APP = create_app()
 
 @APP.route('/version')
 def version_request():
-    return {"version": "4.0 -- Lukas Kohlhase"}
+    return {"version": "5.0 -- CarolinReuter"}
 
 @APP.route('/add', methods=['POST'])
 def addition_request():
@@ -40,3 +40,4 @@ def mul_request():
 if __name__ == '__main__':
 
     serve(APP, port=8100)
+     
