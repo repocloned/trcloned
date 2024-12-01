@@ -22,6 +22,4 @@ class Taschenrechner(BaseModel):
         return self.converter.str_to_int(a) * self.converter.str_to_int(b)
 
     def division(self, a, b):
-        if b == 0: 
-            raise ValueError('Division durch Null verboten')
         return self.converter.str_to_int(a) / self.converter.str_to_int(b)
